@@ -1,16 +1,26 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+class Car:
+    def __init__(self, fuel, maxspeed):
+        self.fuel = fuel
+        self.maxspeed = maxspeed
+        def refuel(self, amount):
+            self.fuel += amount
+        def drive(self):
+            if self.fuel > 0:
+                print('Driving')
+                self.fuel -= 1
+            else:
+                print("No fuel")
+polo = Car(10, 140)
+print(polo.fuel)
+print(polo.maxspeed)
+ferrari = Car(15, 290)
+print(ferrari.fuel)
+print(ferrari.maxspeed)
+print('-------------------')
+print(polo.fuel)
+polo.refuel(10)
+print(polo.fuel)
+print('-------------------')
+print(ferrari.fuel)
+ferrari.drive()
+print(ferrari.fuel)
